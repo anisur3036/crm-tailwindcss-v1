@@ -1,3 +1,4 @@
+const { notify } = require('browser-sync');
 const mix = require('laravel-mix');
 // const tailwindcss = require('tailwindcss');
 const path = require('path');
@@ -24,6 +25,11 @@ mix
         '@': path.resolve('resources/js')
       }
     }
+  })
+  .disableNotifications()
+  .browserSync({
+    notify: false,
+    proxy: '127.0.0.1:8000'
   })
   .version()
   .sourceMaps();

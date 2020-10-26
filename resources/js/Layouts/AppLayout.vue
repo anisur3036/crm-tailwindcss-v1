@@ -1,18 +1,17 @@
 <template>
   <div class="h-screen flex">
-    <aside class="w-64 px-8 pb-3 h-screen bg-gray-100 border-r overflow-y-auto">
+    <aside class="w-64 px-8 pb-3 bg-gray-100 border-r">
       <a href="#"><img class="w-24 h-24" src="img/logo.svg" alt="Logo" /></a>
       <nav>
         <h2
-          class="mb-4 text-sm font-semibold text-gray-600 uppercase tracking-wider"
+          class="mb-4 text-sm font-semibold text-gray-600 tracking-wider"
         >
           CRM v1
         </h2>
         <ul>
           <li class="my-3">
             <a class="text-gray-800 py-3 hover:text-gray-600" href="#"
-              >Dashboard</a
-            >
+              >Dashboard</a>
           </li>
           <li class="my-3">
             <a class="text-gray-800 py-3 hover:text-gray-600" href="#"
@@ -33,66 +32,6 @@
             <a class="text-gray-800 py-3 hover:text-gray-600" href="#"
               >Master Items</a
             >
-          </li>
-          <li class="my-3">
-            <a class="text-gray-800 py-3 hover:text-gray-600" href="#">About</a>
-          </li>
-          <li class="my-3">
-            <a class="text-gray-800 py-3 hover:text-gray-600" href="#">About</a>
-          </li>
-          <li class="my-3">
-            <a class="text-gray-800 py-3 hover:text-gray-600" href="#">About</a>
-          </li>
-          <li class="my-3">
-            <a class="text-gray-800 py-3 hover:text-gray-600" href="#">About</a>
-          </li>
-          <li class="my-3">
-            <a class="text-gray-800 py-3 hover:text-gray-600" href="#">About</a>
-          </li>
-          <li class="my-3">
-            <a class="text-gray-800 py-3 hover:text-gray-600" href="#">About</a>
-          </li>
-          <li class="my-3">
-            <a class="text-gray-800 py-3 hover:text-gray-600" href="#">About</a>
-          </li>
-          <li class="my-3">
-            <a class="text-gray-800 py-3 hover:text-gray-600" href="#">About</a>
-          </li>
-          <li class="my-3">
-            <a class="text-gray-800 py-3 hover:text-gray-600" href="#">About</a>
-          </li>
-          <li class="my-3">
-            <a class="text-gray-800 py-3 hover:text-gray-600" href="#">About</a>
-          </li>
-          <li class="my-3">
-            <a class="text-gray-800 py-3 hover:text-gray-600" href="#">About</a>
-          </li>
-          <li class="my-3">
-            <a class="text-gray-800 py-3 hover:text-gray-600" href="#">About</a>
-          </li>
-          <li class="my-3">
-            <a class="text-gray-800 py-3 hover:text-gray-600" href="#">About</a>
-          </li>
-          <li class="my-3">
-            <a class="text-gray-800 py-3 hover:text-gray-600" href="#">About</a>
-          </li>
-          <li class="my-3">
-            <a class="text-gray-800 py-3 hover:text-gray-600" href="#">About</a>
-          </li>
-          <li class="my-3">
-            <a class="text-gray-800 py-3 hover:text-gray-600" href="#">About</a>
-          </li>
-          <li class="my-3">
-            <a class="text-gray-800 py-3 hover:text-gray-600" href="#">About</a>
-          </li>
-          <li class="my-3">
-            <a class="text-gray-800 py-3 hover:text-gray-600" href="#">About</a>
-          </li>
-          <li class="my-3">
-            <a class="text-gray-800 py-3 hover:text-gray-600" href="#">About</a>
-          </li>
-          <li class="my-3">
-            <a class="text-gray-800 py-3 hover:text-gray-600" href="#">About</a>
           </li>
           <li class="my-3">
             <a class="text-gray-800 py-3 hover:text-gray-600" href="#">About</a>
