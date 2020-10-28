@@ -1,21 +1,24 @@
 module.exports = {
   future: {},
   purge: [
-    './storage/framework/views/*.php',
-    './resources/views/**/*.blade.php',
-    './resources/js/**/*.vue'
+    "./storage/framework/views/*.php",
+    "./resources/views/**/*.blade.php",
+    "./resources/js/**/*.vue"
   ],
 
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Niramit', 'Sans-serif']
+        sans: ["Nunito", "Sans-serif"]
+      },
+      spacing: {
+        "80": "20rem",
       }
     }
   },
 
   variants: {
-    opacity: ['responsive', 'hover', 'focus', 'disabled']
+    opacity: ["responsive", "hover", "focus", "disabled"]
   },
   plugins: []
 };

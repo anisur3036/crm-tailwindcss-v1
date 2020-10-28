@@ -1,20 +1,18 @@
 <template>
   <layout>
-    <div>
-      <h2>{{ name }}</h2>
-    </div>
+    <!-- something -->
   </layout>
 </template>
 
 <script>
-import Layout from '@/Layouts/AppLayout.vue';
+import Layout from "@/Layouts/AppLayout.vue";
 
 export default {
   components: {
-    Layout
+    Layout,
   },
   props: {
-    name: String
-  }
+    name: String,
+  },
 };
 </script>

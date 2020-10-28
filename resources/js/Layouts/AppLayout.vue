@@ -1,17 +1,45 @@
 <template>
-  <div class="h-screen flex">
-    <aside class="w-64 px-8 pb-3 bg-gray-100 border-r">
-      <a href="#"><img class="w-24 h-24" src="img/logo.svg" alt="Logo" /></a>
+  <div id="app" class="h-screen flex">
+    <div
+      @click="sidebarOpen = false"
+      :class="
+        sidebarOpen ? 'opacity-75 fixed inset-0 z-20 bg-gray-600' : 'hidden'
+      "
+    ></div>
+    <aside
+      :class="
+        sidebarOpen ? 'translate-x-0 ease-in-out' : '-translate-x-full ease-in'
+      "
+      class="fixed transform inset-y-0 left-0 z-30 md:inset-auto md:translate-x-0 md:static w-64 px-8 pb-3 bg-gray-100 border-r overflow-auto"
+    >
+      <div class="flex items-center justify-between">
+        <a href="#"><img class="w-24 h-24" src="img/logo.svg" alt="Logo" /></a>
+        <button @click="sidebarOpen = false" class="md:hidden">
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            ></path>
+          </svg>
+        </button>
+      </div>
       <nav>
-        <h2
-          class="mb-4 text-sm font-semibold text-gray-600 tracking-wider"
-        >
+        <h2 class="mb-4 text-sm font-semibold text-gray-600 tracking-wider">
           CRM v1
         </h2>
         <ul>
           <li class="my-3">
             <a class="text-gray-800 py-3 hover:text-gray-600" href="#"
-              >Dashboard</a>
+              >Dashboard</a
+            >
           </li>
           <li class="my-3">
             <a class="text-gray-800 py-3 hover:text-gray-600" href="#"
@@ -41,9 +69,25 @@
     </aside>
     <div class="flex-1 min-w-0 bg-white">
       <header class="py-3 px-6 border-b-2 border-gray-200">
-        <div class="flex justify-between items-center">
-          <div>
-            <div class="relative">
+        <div class="flex pb-2 justify-between items-center">
+          <button @click="sidebarOpen = true" class="md:hidden mr-2">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h7"
+              ></path>
+            </svg>
+          </button>
+          <div class="flex-1">
+            <div class="relative w-64">
               <span class="pl-2 absolute inset-y-0 left-0 flex items-center">
                 <svg
                   class="w-6 h-6 text-gray-500"
@@ -85,18 +129,18 @@
             </button>
             <button>
               <img
-                class="h-8 w-8 rounded-full"
+                class="h-8 w-8 object-cover rounded-full"
                 src="img/profile.jpg"
                 alt="Jane Doe"
               />
             </button>
           </div>
         </div>
+        <slot name="issue"></slot>
       </header>
-
-      <div>
+      <main class="static bg-gray-100 p-3 overflow-auto">
         <slot />
-      </div>
+      </main>
     </div>
   </div>
 </template>
@@ -105,9 +149,8 @@
 export default {
   data() {
     return {
-      //
+      sidebarOpen: false
     };
   }
-  //
 };
 </script>

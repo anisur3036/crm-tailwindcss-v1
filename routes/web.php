@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Inertia\Inertia;
 use Illuminate\Support\Facades\Route;
 
@@ -13,6 +14,13 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('/issues', function() {
+    return Inertia::render('Issue', [
+    	//
+    ]
+  );
+});
 
 Route::get('/', function () {
     return Inertia::render('Welcome', [
