@@ -22,6 +22,13 @@ Route::get('/issues', function() {
   );
 });
 
+Route::get('/app-layout-2', function() {
+    return Inertia::render('LayoutTwo', [
+    	//
+    ]
+  );
+});
+
 Route::get('/', function () {
     return Inertia::render('Welcome', [
     	'name' => 'Welcome to Laravel InertiaVue and Tailwindcss',
