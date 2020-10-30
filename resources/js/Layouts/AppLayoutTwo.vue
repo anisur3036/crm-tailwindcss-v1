@@ -15,9 +15,9 @@
       <div class="sidebar"></div>
       <!-- /.sidebar -->
     </aside>
-    <div class="flex-1">
+    <div class="flex-1 bg-gray-200">
       <nav
-        class="relative top-0 py-2 px-4 border-b border-gray-300 flex items-center justify-between flex-no-wrap"
+        class="relative top-0 py-2 px-4 border-b bg-white border-gray-300 flex items-center justify-between flex-no-wrap"
       >
         <!-- Left navbar links -->
         <ul class="flex items-center">
@@ -67,7 +67,7 @@
               </svg>
             </span>
             <input
-              class="pl-8 py-1 w-80 border-2 bg-gray-100 border-gray-300 rounded-md text-gray-600 hover:text-gray-400 placeholder:text-gray-500"
+              class="pl-8 py-1 lg:w-80 border-2 bg-gray-100 border-gray-300 rounded-md text-gray-600 hover:text-gray-400 placeholder:text-gray-500"
               placeholder="Search"
             />
           </li>
@@ -113,57 +113,14 @@
             </button>
           </li>
           <!-- end-notification -->
-          <!-- alt-menu -->
-          <li class="mr-2">
-            <button @click="rightSidebarOpen = true">
-              <svg
-                class="w-6 h-6 text-gray-600 hover:text-gray-400"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 6h16M4 12h16M4 18h7"
-                ></path>
-              </svg>
-            </button>
-          </li>
+          <!-- user-profile -->
+          <user-profile-menu />
           <!-- end-alt-menu -->
         </ul>
       </nav>
       <main class="bg-gray-100 min-h-screen">
         <slot></slot>
       </main>
-      <div
-        :class="rightSidebarOpen ? 'block' : 'hidden'"
-        class="absolute right-0 top-20 bottom-0 w-64 bg-gray-800"
-      >
-        <div class="flex justify-between">
-          <div class="px-3 py-2">
-            <button @click="rightSidebarOpen = false">
-              <svg
-                class="w-5 h-5 text-gray-100"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M6 18L18 6M6 6l12 12"
-                ></path>
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
-      <!-- end-nav -->
       <footer
         class="flex items-center justify-between border border-t border-gray-300"
       >
@@ -178,10 +135,14 @@
 </template>
 
 <script>
+import UserProfileMenu from '@/Components/UserProfileMenu.vue';
 export default {
+  components: {
+    UserProfileMenu
+  },
   data() {
     return {
-      rightSidebarOpen: false
+      // rightSidebarOpen: false
     };
   }
 };
