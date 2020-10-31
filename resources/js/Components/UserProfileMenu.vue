@@ -2,7 +2,7 @@
   <li class="mr-2 relative">
     <button @click="toggleDropdown" class="flex items-center">
       <img
-        class="h-5 w-5 rounded-full object-cover"
+        class="h-6 w-6 rounded-full object-cover"
         src="img/profile.jpg"
         alt="Profile Name"
       />
@@ -33,8 +33,7 @@
         </li>
         <li>
           <menu-item
-            href="https://google.com"
-            target="_blank"
+            href="#"
             class="flex items-center px-3 py-3 hover:bg-gray-200"
             ref="Analytics"
             name="chart-bar"
@@ -96,7 +95,6 @@ export default {
       isVisible: false
     };
   },
-
   methods: {
     toggleDropdown() {
       this.isVisible = !this.isVisible;
@@ -105,4 +103,14 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+.dropdown-fade-enter-active,
+.dropdown-fade-leave-active {
+  transition: all 0.1s ease-in-out;
+}
+.dropdown-fade-enter,
+.dropdown-fade-leave-to {
+  opacity: 0;
+  transform: translateY(-12px);
+}
+</style>
