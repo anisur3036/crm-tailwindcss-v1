@@ -83,7 +83,7 @@
 </template>
 
 <script>
-import Icon from '@/Components/Icon.vue';
+import Icon from '@/Shared/Icon.vue';
 import MenuItem from '@/Components/MenuItem.vue';
 
 export default {
