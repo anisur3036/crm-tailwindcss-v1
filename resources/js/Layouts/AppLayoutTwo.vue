@@ -23,20 +23,10 @@
         <ul class="flex items-center">
           <li>
             <button>
-              <svg
+              <icon
+                name="menu"
                 class="w-6 h-6 text-gray-600 hover:text-gray-400"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                ></path>
-              </svg>
+              ></icon>
             </button>
           </li>
           <li class="ml-2">
@@ -51,20 +41,10 @@
           </li>
           <li class="ml-2 relative">
             <span class="absolute flex items-center pl-2 inset-y-0 left-0">
-              <svg
+              <icon
+                name="search"
                 class="w-5 h-5 text-gray-600 hover:text-gray-400"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                ></path>
-              </svg>
+              ></icon>
             </span>
             <input
               class="pl-8 py-1 lg:w-80 border-2 bg-gray-100 border-gray-300 rounded-md text-gray-600 hover:text-gray-400 placeholder:text-gray-500"
@@ -76,40 +56,20 @@
           <!-- chat -->
           <li class="mr-2">
             <button>
-              <svg
+              <icon
+                name="chat"
                 class="w-6 h-6 text-gray-600 hover:text-gray-400"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
-                ></path>
-              </svg>
+              ></icon>
             </button>
           </li>
           <!-- end-chat -->
           <!-- notification -->
           <li class="mr-2">
             <button>
-              <svg
+              <icon
+                name="notification"
                 class="w-6 h-6 text-gray-600 hover:text-gray-400"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
-                ></path>
-              </svg>
+              ></icon>
             </button>
           </li>
           <!-- end-notification -->
@@ -136,9 +96,11 @@
 
 <script>
 import UserProfileMenu from '@/Components/UserProfileMenu.vue';
+import Icon from '@/Components/Icon';
 export default {
   components: {
-    UserProfileMenu
+    UserProfileMenu,
+    Icon
   },
   data() {
     return {
