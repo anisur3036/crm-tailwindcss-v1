@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Redirector;
 
 class HomeController extends Controller
 {
@@ -19,10 +21,17 @@ class HomeController extends Controller
     /**
      * Show the application dashboard.
      *
-     * @return \Illuminate\Contracts\Support\Renderable
+     * @param Request $request
+     * @return RedirectResponse|Redirector
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('home');
+        if ($request->user()->hasRole('user')) {
+            return redirect('/');
+        }
+
+        if ($request->user()->hasRole('admin')){
+            return redirect('/admin/dashboard');
+        }
     }
 }
