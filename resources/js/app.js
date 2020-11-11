@@ -1,8 +1,9 @@
-require('./bootstrap');
-
 import { App, plugin } from '@inertiajs/inertia-vue'
 import Vue from 'vue'
 import PortalVue from 'portal-vue';
+
+import './bootstrap'
+
 
 Vue.use(plugin)
 Vue.use(PortalVue);

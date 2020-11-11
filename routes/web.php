@@ -10,6 +10,10 @@ Route::get('/issues', function() {
     ]);
 });
 
+Route::get('/dashboard3', function() {
+    return Inertia::render('Dashboard3', []);
+});
+
 Route::get('/app-layout-2', function() {
     return Inertia::render('LayoutTwo', [
         //
