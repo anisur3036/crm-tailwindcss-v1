@@ -1,6 +1,14 @@
 <template>
   <app-layout-3>
-    <h2>This is new page</h2>
+    <div class="relative">
+      <button class="bg-gray-800 py-2 px-3 rounded-md">Notification</button>
+      <span
+        class="animate-ping absolute top-0 right-0 -mr-1 -mt-1 bg-pink-700 rounded-full w-3 h-3"
+      ></span>
+      <span
+        class="absolute top-0 right-0 -mr-1 -mt-1 bg-pink-700 rounded-full w-3 h-3"
+      ></span>
+    </div>
   </app-layout-3>
 </template>
 

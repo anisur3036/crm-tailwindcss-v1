@@ -4,6 +4,10 @@ use Illuminate\Support\Facades\Auth;
 use Inertia\Inertia;
 use Illuminate\Support\Facades\Route;
 
+Route::get('/blog', function() {
+    return Inertia::render('Blogs/Index', []);
+});
+
 Route::get('/issues', function() {
     return Inertia::render('Issue', [
         //
