@@ -15,7 +15,7 @@ const path = require("path");
 
 mix
   .js("resources/js/app.js", "public/js")
-  .sass('resources/sass/app.scss', 'public/css')
+  // .sass('resources/sass/app.scss', 'public/css')
   .options({
     processCssUrls: false,
     postCss: [ tailwindcss('./tailwind.config.js') ],
@@ -32,7 +32,7 @@ mix
   .disableNotifications()
   // .browserSync({
   //   notify: false,
-  //   proxy: "127.0.0.1:8000"
+  //   proxy: "http://crm-tailwindcss-v1.test"
   // })
   .version()
   .sourceMaps();

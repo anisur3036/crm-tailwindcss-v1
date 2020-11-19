@@ -1,16 +1,16 @@
 <template>
   <svg
-    v-if="name === 'savron_down'"
-    name="name"
-    fill="currentColor"
-    xmlns="http://www.w3.org/2000/svg"
+    v-if="name === 'chevron_right'"
+    fill="none"
+    stroke="currentColor"
     viewBox="0 0 24 24"
-    width="24"
-    height="24"
+    xmlns="http://www.w3.org/2000/svg"
   >
     <path
-      class="heroicon-ui"
-      d="M15.3 9.3a1 1 0 0 1 1.4 1.4l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 0 1 1.4-1.4l3.3 3.29 3.3-3.3z"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      d="M9 5l7 7-7 7"
     ></path>
   </svg>
   <svg
@@ -225,6 +225,21 @@
       stroke-linejoin="round"
       stroke-width="2"
       d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"
+    ></path>
+  </svg>
+  <svg
+    v-else-if="name === 'chevron_down'"
+    class="w-6 h-6"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      d="M19 9l-7 7-7-7"
     ></path>
   </svg>
 </template>

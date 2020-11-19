@@ -15,7 +15,8 @@ module.exports = {
         "80": "20rem",
         "62": "15.625rem",
       }
-    }
+    },
+    textIndent: theme => theme('spacing'),
   },
 
   variants: {

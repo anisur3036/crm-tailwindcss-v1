@@ -8,6 +8,12 @@
 // @import '~bootstrap/scss/bootstrap';
 //Breakpoint
 @import 'breakpoint';
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+//customs
+@import 'button';
 @import 'mobile-menu';
-@import 'tailwind';
+
+//utilitites
+@import 'tailwindcss/utilities';
 
