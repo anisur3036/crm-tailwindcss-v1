@@ -3,7 +3,8 @@
     <sidebar-menu />
     <div class="flex-1 bg-gray-200">
       <top-nav />
-      <main class="bg-gray-100 min-h-screen pt-3 pl-3">
+      <main class="bg-gray-100 min-h-screen p-4">
+        <slot name="heading" />
         <slot />
       </main>
       <app-footer />

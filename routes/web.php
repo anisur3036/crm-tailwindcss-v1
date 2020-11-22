@@ -3,6 +3,7 @@
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MenuController;
+use App\Http\Controllers\UsersController;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -10,7 +11,6 @@ use Inertia\Inertia;
 use Illuminate\Support\Facades\Route;
 
 // Auth
-
 Route::get('login', [LoginController::class, 'showLoginForm'])
     ->name('login')
     ->middleware('guest');
@@ -50,7 +50,7 @@ Route::get('admin/dashboard', function () {
 });
 
 Route::get('/', function () {
-    return Inertia::render('Welcome');
+    return Inertia::render('datatable');
 })->name('/');
 
 // Auth::routes();
@@ -58,11 +58,10 @@ Route::get('/', function () {
 // Route::get('all', [\App\Http\Controllers\PostController::class, 'index']);
 // Route::get('posts/{post}', [\App\Http\Controllers\PostController::class, 'show']);
 
-Route::get('/menu', [MenuController::class, 'index'])->name('name');
+Route::get('/users', [UsersController::class, 'index'])->name('users.index');
 
-Route::get('users/', [HomeController::class, 'getUserData'])->name('users.index');
 
-Route::get('/datatable', function(){
-    return Inertia::render('datatable');
-});
+//API
+Route::get('/api/users', [UsersController::class, 'getUserData']);
+
 

@@ -1,6 +1,9 @@
 <template>
   <layout>
     <user-data-table></user-data-table>
+    <template v-slot:heading>
+      <h2 class="text-2xl py-2">All Users</h2>
+    </template>
   </layout>
 </template>
 

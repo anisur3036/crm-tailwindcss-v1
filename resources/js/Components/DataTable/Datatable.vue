@@ -14,10 +14,11 @@
               : 'sorting'
           "
           :style="'cursor:pointer;'"
-          class="text-left p-3 px-5"
+          class="text-left py-3 px-5"
         >
           {{ column.label }}
         </th>
+        <th class="text-left py-3 px-0">Action</th>
       </tr>
     </thead>
     <slot></slot>
