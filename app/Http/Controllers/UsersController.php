@@ -90,6 +90,17 @@ class UsersController extends Controller
         //
     }
 
+    public function allUsers(Request $request)
+    {
+        $users = User::latest()->paginate(50);
+
+        if($request->wantsJson()) {
+            return $users;
+        }
+
+        return Inertia::render('Users/AllUsers', ['users' => $users]);
+    }
+
     /**
      * Update the specified resource in storage.
      *
